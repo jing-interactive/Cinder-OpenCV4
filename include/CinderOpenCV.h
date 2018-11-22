@@ -5,6 +5,8 @@
 #include "cinder/Cinder.h"
 #include "cinder/ImageIo.h"
 
+#define 	CV_RGB(r, g, b)   cv::Scalar((b), (g), (r), 0)
+
 namespace cinder {
 
 class ImageTargetCvMat : public ImageTarget {
@@ -158,7 +160,7 @@ inline ImageSourceRef fromOcv( cv::UMat &umat )
 
 inline cv::Scalar toOcv( const Color &color )
 {
-	return cv::Scalar( color.b * 255, color.g * 255, color.r * 255 );
+	return CV_RGB( color.r * 255, color.g * 255, color.b * 255 );
 }
 
 inline vec2 fromOcv( const cv::Point2f &point )
