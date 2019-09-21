@@ -2,22 +2,22 @@
 <cinder>
 <block
 	name="OpenCV4"
-	id="org.libcinder.opencv"
+	id="org.jing.opencv"
 	author="Cinder Project"
 	license="BSD"
 	summary="OpenCV (v4) computer vision libraries"
-	git="git://github.com/cinder/Cinder-OpenCV.git"
+	git="git://github.com/jing-interactive/Cinder-OpenCV4.git"
 	version="4.0.0"
-	libraryUrl="http://opencv.org/"
+	libraryUrl="http://vinjn.com/"
 	>
 	<header>include/CinderOpenCV.h</header>
 	<includePath>include</includePath>
 	<platform compiler="vc2015">
 		<platform config="Debug">
-			<staticLibrary>lib/vc2015/$(PlatformTarget)/opencv_world400d.lib</staticLibrary>
+			<staticLibrary>lib/msw/opencv_world400d.lib</staticLibrary>
 		</platform>
 		<platform config="release">
-			<staticLibrary>lib/vc2015/$(PlatformTarget)/opencv_world400.lib</staticLibrary>
+			<staticLibrary>lib/msw/opencv_world400.lib</staticLibrary>
 		</platform>
 	</platform>
 	<platform os="macosx">
